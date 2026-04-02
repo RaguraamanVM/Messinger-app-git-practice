@@ -21,7 +21,7 @@ def send_message():
         "to": data["to"],
         "message": data["message"]
     })
-    return jsonify({"message": "Message sent"}), 201
+    return jsonify({"message": "Message sentm successfullly"}), 201
 
 # Get messages
 @app.route('/messages', methods=['GET'])
