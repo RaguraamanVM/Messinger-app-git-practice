@@ -32,7 +32,8 @@ def get_messages():
 @app.route('/status', methods=['POST'])
 def update_status():
     data = request.json
-    return jsonify({"status": data["status"]}), 200
+    return jsonify({"status": data["status"], "updated": True}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
+
