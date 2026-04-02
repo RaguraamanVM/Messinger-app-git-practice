@@ -21,7 +21,9 @@ def send_message():
         "to": data["to"],
         "message": data["message"]
     })
-    return jsonify({"message": "Message sentm successfullly"}), 201
+
+    return jsonify({"message": "Message sent successfully"}), 201
+
 
 # Get messages
 @app.route('/messages', methods=['GET'])
@@ -32,7 +34,8 @@ def get_messages():
 @app.route('/status', methods=['POST'])
 def update_status():
     data = request.json
-    return jsonify({"status": data["status"]}), 200
+    return jsonify({"status": data["status"], "updated": True}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
+
